@@ -19,6 +19,7 @@ export const users = pgTable('users', {
   image: text('image'),
   hashedPassword: text('hashed_password'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
+  stripeCustomerId: text('stripe_customer_id'),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => ({
   emailIdx: uniqueIndex('users_email_idx').on(table.email),
