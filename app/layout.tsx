@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'PluginGuard AI - Proactive WordPress Plugin Security Audits',
-  description: 'Value Proposition: Prevents security breaches and data leaks (like the UK Gov OBR incident in Signal 1) by providing continuous, automated security audits and alerts for WordPress plugins, saving developers and site owners time and significantly reducing their risk exposure to third-party vulnerabilities.',
+  description: 'Value Proposition: Prevents security breaches and data leaks (like the UK Gov OBR incident in Signal',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
