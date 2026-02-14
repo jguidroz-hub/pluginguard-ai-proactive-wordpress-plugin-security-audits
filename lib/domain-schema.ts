@@ -49,3 +49,16 @@ export const wordpressSites = pgTable('wordpress_sites', {
   createdAt: timestamp('created_at').notNull(),
   updatedAt: timestamp('updated_at').notNull(),
 });
+
+// Vulnerability reports
+export const vulnerabilityReport = pgTable('vulnerability_report', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  pluginName: text('plugin_name').notNull(),
+  severity: text('severity').notNull().default('medium'),
+  description: text('description'),
+  recommendation: text('recommendation'),
+  cveId: text('cve_id'),
+  createdAt: timestamp('created_at').notNull().default(sql`now()`),
+  updatedAt: timestamp('updated_at').notNull().default(sql`now()`),
+});
